@@ -1,10 +1,12 @@
 import { Component } from '@angular/core';
+import { Task } from './models/task.model'
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
+
 export class AppComponent {
   currentFocus: string = 'Angular Homework';
   currentTime = new Date();
@@ -12,7 +14,5 @@ export class AppComponent {
   day: number = this.currentTime.getDate();
   year: number = this.currentTime.getFullYear();
 
-  firstTask = {
-    description: "Finish weekend Angular homework for Epicodus course"
-  }
+  firstTask: Task = new Task("Finish weekend Angular homework for Epicodus course")
 }
